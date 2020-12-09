@@ -3,6 +3,7 @@ package com.qz.modules.worker.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.qz.modules.worker.entity.WorkUserEntity;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -56,9 +57,12 @@ public class WorkerController {
     @RequestMapping("/save")
     @RequiresPermissions("worker:worker:save")
     public R save(@RequestBody WorkerEntity worker){
-		workerService.save(worker);
-
-        return R.ok();
+        WorkerEntity wue = workerService.getById(worker.getWorkerId());
+        if (wue != null){
+            workerService.save(worker);
+            return R.ok();
+        }
+        return R.error("已存在" + worker.getName() + "该用户！！");
     }
 
     /**

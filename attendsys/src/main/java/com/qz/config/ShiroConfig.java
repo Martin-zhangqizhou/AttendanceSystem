@@ -55,7 +55,7 @@ public class ShiroConfig {
         filterMap.put("/captcha.jpg", "anon");
         filterMap.put("/aaa.txt", "anon");
         filterMap.put("/sys/**", "oauth2");
-        //filterMap.put("/worker/**","anon");
+        filterMap.put("/worker/worker/save","oauth2");
         shiroFilter.setFilterChainDefinitionMap(filterMap);
 
         return shiroFilter;

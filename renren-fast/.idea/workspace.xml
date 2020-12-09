@@ -23,34 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01de7c2d-ecab-4f5b-a234-07c0f48ee9f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/AbstractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/WorkUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/dao/WorkUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/dao/WorkerUserTokenDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/entity/WorkUserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/entity/WorkerUserTokenEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/form/PasswordForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/form/WorkerLoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/form/WorkerLogoutForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/WorkUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/WorkerUserTokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/impl/WorkUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/impl/WorkerUserTokenServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../attendsys/src/main/resources/mapper/worker/WorkUserDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/config/MybatisPlusConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/config/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/controller/SysLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/controller/SysLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/entity/SysUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/entity/SysUserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/MangerApproveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/MangerApproveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/OffNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/OffNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/entity/MangerApproveEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/entity/MangerApproveEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/impl/MangerApproveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/impl/MangerApproveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/impl/WorkerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/service/impl/WorkerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/WorkUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/WorkUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/WorkerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../attendsys/src/main/java/com/qz/modules/worker/controller/WorkerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -120,8 +120,9 @@ public class WorkUserController extends AbstractController{
      */
     @PostMapping("/logout")
     public R logout(@RequestBody WorkerLogoutForm logoutForm) {
-        workerUserTokenService.logout(logoutForm.getWorkerId());
-        return R.ok();
+        //workerUserTokenService.logout(logoutForm.getWorkerId());
+        workerUserTokenService.removeById(logoutForm.getWorkerId());
+        return R.ok("成功登出！");
 //        return logoutForm.getWorkerId();
     }
 
