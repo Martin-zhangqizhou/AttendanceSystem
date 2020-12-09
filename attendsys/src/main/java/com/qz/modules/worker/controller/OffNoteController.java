@@ -105,7 +105,7 @@ public class OffNoteController {
         }else {
             process(offNoteEntity);
 //            return R.error("已转交给管理员");
-            MangerApproveEntity mae = new MangerApproveEntity(offNoteEntity.getId(),offNoteEntity.getOffTime(),offNoteEntity.getOffEnd());
+            MangerApproveEntity mae = MangerApproveEntity.builder().offTime(offNoteEntity.getOffTime()).endTime(offNoteEntity.getOffEnd()).offId(offNoteEntity.getWorkerId()).build();
             mangerApproveService.save(mae);
             return R.ok().put("请假记录条",mae);
         }
@@ -119,7 +119,6 @@ public class OffNoteController {
         int offDays = offNoteEntity.getOffDays();
         Date startDate = offNoteEntity.getOffTime();
         Date endDate = offNoteEntity.getOffEnd();
-//        MangerApproveEntity mae = new MangerApproveEntity(offNoteEntity.getId(),1);
         return R.ok("开始时间是" + startDate.toString() + "\n" + "结束时间是" + endDate.toString());
     }
 }

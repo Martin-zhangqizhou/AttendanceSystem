@@ -22,7 +22,7 @@ public class MangerApproveServiceImpl extends ServiceImpl<MangerApproveDao, Mang
                 new Query<MangerApproveEntity>().getPage(params),
                 new QueryWrapper<MangerApproveEntity>()
         );
-
+        System.out.println(page.getRecords());
         return new PageUtils(page);
     }
 

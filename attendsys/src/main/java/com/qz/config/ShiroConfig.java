@@ -33,8 +33,13 @@ public class ShiroConfig {
 
     @Bean("shiroFilter")
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
+        //1.创建过滤器工厂
         ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
+        //2.设置安全管理器
         shiroFilter.setSecurityManager(securityManager);
+        //3.通用配置（跳转登录页面，为授权跳转的页面）
+//        filterFactoryBean.setLoginUrl("/autherror?code=1");
+//        filterFactoryBean.setUnauthorizedUrl("/autherror?code=2");
 
         //oauth过滤
         Map<String, Filter> filters = new HashMap<>();
@@ -49,7 +54,8 @@ public class ShiroConfig {
         filterMap.put("/v2/api-docs", "anon");
         filterMap.put("/captcha.jpg", "anon");
         filterMap.put("/aaa.txt", "anon");
-        filterMap.put("/**", "oauth2");
+        filterMap.put("/sys/**", "oauth2");
+        //filterMap.put("/worker/**","anon");
         shiroFilter.setFilterChainDefinitionMap(filterMap);
 
         return shiroFilter;

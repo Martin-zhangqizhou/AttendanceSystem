@@ -22,7 +22,7 @@ public class WorkerServiceImpl extends ServiceImpl<WorkerDao, WorkerEntity> impl
                 new Query<WorkerEntity>().getPage(params),
                 new QueryWrapper<WorkerEntity>()
         );
-
+        System.out.println(page.getRecords());
         return new PageUtils(page);
     }
 

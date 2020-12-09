@@ -1,47 +1,41 @@
 package com.qz.modules.worker.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
-
-import lombok.Builder;
 import lombok.Data;
 
 /**
- * 
+ * 普通用户Token
  * 
  * @author qz
  * @email qzgarden@tju.edu.cn
- * @date 2020-12-08 19:13:05
+ * @date 2020-12-09 10:23:17
  */
 @Data
-@Builder
-@TableName("manger_approve")
-public class MangerApproveEntity implements Serializable {
+@TableName("worker_user_token")
+public class WorkerUserTokenEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 
 	 */
-	@TableId
-	private Integer id;
+	@TableId(type = IdType.INPUT)
+	private Long workerId;
 	/**
-	 * 
+	 * token
 	 */
-	private Integer managerId;
+	private String token;
 	/**
-	 * 
+	 * 过期时间
 	 */
-	private Integer offId;
+	private Date expireTime;
 	/**
-	 * 
+	 * 更新时间
 	 */
-	private Integer ratified;
-
-	private Date offTime;
-
-	private Date endTime;
+	private Date updateTime;
 
 }

@@ -11,8 +11,6 @@ import com.qz.utils.R;
 import com.qz.validator.Assert;
 import com.qz.validator.ValidatorUtils;
 import com.qz.validator.group.AddGroup;
-import com.qz.validator.group.UpdateGroup;
-import org.apache.commons.lang.ArrayUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,9 +115,10 @@ public class SysUserController extends AbstractController {
 	@PostMapping("/update")
 	@RequiresPermissions("sys:user:update")
 	public R update(@RequestBody SysUserEntity user){
-		ValidatorUtils.validateEntity(user, UpdateGroup.class);
+		//ValidatorUtils.validateEntity(user, UpdateGroup.class);
 
 		user.setCreateUserId(getUserId());
+		System.out.println("---------------------");
 		sysUserService.update(user);
 		
 		return R.ok();
@@ -131,17 +130,19 @@ public class SysUserController extends AbstractController {
 	@SysLog("删除用户")
 	@PostMapping("/delete")
 	@RequiresPermissions("sys:user:delete")
-	public R delete(@RequestBody Long[] userIds){
-		if(ArrayUtils.contains(userIds, 1L)){
-			return R.error("系统管理员不能删除");
-		}
+	public R delete(@RequestParam("userId") Long userId){
+//		if(ArrayUtils.contains(userIds, 1L)){
+//			return R.error("系统管理员不能删除");
+//		}
+//
+//		if(ArrayUtils.contains(userIds, getUserId())){
+//			return R.error("当前用户不能删除");
+//		}
 		
-		if(ArrayUtils.contains(userIds, getUserId())){
-			return R.error("当前用户不能删除");
-		}
-		
-		sysUserService.deleteBatch(userIds);
+		sysUserService.removeById(userId);
 		
 		return R.ok();
 	}
+
+
 }
