@@ -7,7 +7,6 @@ import com.qz.utils.R;
 /**
  * 用户Token
  *
- * @author Mark sunlightcs@gmail.com
  */
 public interface SysUserTokenService extends IService<SysUserTokenEntity> {
 

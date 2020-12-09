@@ -9,11 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-/**
- * 异常处理器
- *
- * @author Mark sunlightcs@gmail.com
- */
+
 @RestControllerAdvice
 public class RRExceptionHandler {
 	private Logger logger = LoggerFactory.getLogger(getClass());

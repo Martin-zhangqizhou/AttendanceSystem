@@ -21,7 +21,6 @@ import java.util.Map;
 /**
  * 登录相关
  *
- * @author Mark sunlightcs@gmail.com
  */
 @CrossOrigin
 @RestController
