@@ -3,6 +3,7 @@ package com.qz.modules.worker.dao;
 import com.qz.modules.worker.entity.MangerApproveEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 
@@ -13,5 +14,7 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface MangerApproveDao extends BaseMapper<MangerApproveEntity> {
-	
+
+    void updateType(@Param("id") Integer id, @Param("ratified") Integer ratified);
+
 }

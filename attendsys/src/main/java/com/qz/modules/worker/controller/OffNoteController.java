@@ -97,17 +97,19 @@ public class OffNoteController {
      */
     @PostMapping("/off")
     public R off(@RequestBody OffNoteEntity offNoteEntity){
+        System.out.println(offNoteEntity.toString());
         int days  = offNoteEntity.getOffDays();
         if (days <= 3){
             offNoteService.save(offNoteEntity);
-            return R.ok();
+            return R.ok().put("message", "请假成功");
 
         }else {
             process(offNoteEntity);
 //            return R.error("已转交给管理员");
             MangerApproveEntity mae = MangerApproveEntity.builder().offTime(offNoteEntity.getOffTime()).endTime(offNoteEntity.getOffEnd()).offId(offNoteEntity.getWorkerId()).build();
+            mae.setRatified(0);
             mangerApproveService.save(mae);
-            return R.ok().put("请假记录条",mae);
+            return R.error(201, "转交管理员");
         }
     }
 

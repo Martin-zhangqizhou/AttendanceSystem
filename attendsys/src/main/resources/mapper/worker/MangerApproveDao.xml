@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qz.modules.worker.dao.MangerApproveDao">
+
+    <update id="updateType">
+        update manger_approve set ratified = #{ratified} where id = #{id}
+    </update>
+
+</mapper>

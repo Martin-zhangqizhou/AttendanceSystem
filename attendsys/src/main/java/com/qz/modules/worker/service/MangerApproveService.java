@@ -16,5 +16,8 @@ import java.util.Map;
 public interface MangerApproveService extends IService<MangerApproveEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+
+    void updateType(Integer id, Integer ratified);
 }
 

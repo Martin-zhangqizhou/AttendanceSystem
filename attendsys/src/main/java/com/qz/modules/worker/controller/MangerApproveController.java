@@ -99,9 +99,18 @@ public class MangerApproveController {
      */
     @RequestMapping("/ratify")
     public Object ratify(@RequestParam Map<String, Object> params){
-        PageUtils page = mangerApproveService.queryPage(params);
-        List<MangerApproveEntity> list= (List<MangerApproveEntity>) page.getList();
-        return list;
+//        PageUtils page = mangerApproveService.queryPage(params);
+//        List<MangerApproveEntity> list= (List<MangerApproveEntity>) page.getList();
+//        return list;
+        Integer id = Integer.parseInt((String) params.get("id"));
+        Integer ratified = Integer.parseInt((String)params.get("ratified"));
+        if (ratified.equals(0)){
+            ratified = 1;
+        }else {
+            ratified = 0;
+        }
+        mangerApproveService.updateType(id, ratified);
+        return null;
     }
 
 

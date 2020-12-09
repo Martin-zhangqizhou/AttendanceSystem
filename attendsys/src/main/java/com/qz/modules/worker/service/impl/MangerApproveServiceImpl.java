@@ -26,4 +26,10 @@ public class MangerApproveServiceImpl extends ServiceImpl<MangerApproveDao, Mang
         return new PageUtils(page);
     }
 
+    @Override
+    public void updateType(Integer id, Integer ratified) {
+        baseMapper.updateType(id, ratified);
+    }
+
+
 }

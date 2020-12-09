@@ -9,7 +9,6 @@ import lombok.Data;
  */
 @Data
 public class WorkerLoginForm {
-    private Integer workerId;
     private String username;
     private String password;
 

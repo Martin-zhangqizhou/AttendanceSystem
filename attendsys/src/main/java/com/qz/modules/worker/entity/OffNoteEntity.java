@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -37,14 +39,16 @@ public class OffNoteEntity implements Serializable {
 	/**
 	 * 
 	 */
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	@JSONField(format = "yyyy-MM-dd HH:mm:ss")
+//	@DateTimeFormat(pattern="yyyy-MM-dd")
+//	@JSONField(format = "yyyy-MM-dd")
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date offTime;
 	/**
 	 * 
 	 */
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	@JSONField(format = "yyyy-MM-dd HH:mm:ss")
+//	@DateTimeFormat(pattern="yyyy-MM-dd")
+//	@JSONField(format = "yyyy-MM-dd")
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date offEnd;
 	/**
 	 * 
