@@ -46,16 +46,15 @@ create table out_note
 
 create table off_note
 (
-	id int not null,
-	w_id int not null,
-	off_num varchar(10) not null,
-	off_time date default null null,
-	off_end_time date default null null,
-	off_days int default null null,
-	constraint off_note_pk
-		primary key (off_num)
+    id        int  not null,
+    worker_id int  not null,
+    off_num   int auto_increment
+        primary key,
+    off_time  date null,
+    off_end   date null,
+    off_days  int  null
 )
-comment '请假记录表';
+    comment '请假记录表';
 
 create table count
 (
@@ -69,6 +68,18 @@ create table count
     off_note  int         null
 )
     comment '月统计表';
+
+    create table worker_user_token
+(
+    worker_id   bigint       not null
+        primary key,
+    token       varchar(100) not null comment 'token',
+    expire_time datetime     null comment '过期时间',
+    update_time datetime     null comment '更新时间',
+    constraint token
+        unique (token)
+)
+    comment '普通用户Token';
 
 CREATE TABLE `sys_menu` (
   `menu_id` bigint NOT NULL AUTO_INCREMENT,

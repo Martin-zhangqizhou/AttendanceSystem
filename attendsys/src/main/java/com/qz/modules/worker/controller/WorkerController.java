@@ -23,7 +23,7 @@ import com.qz.utils.R;
  * @date 2020-12-08 10:15:30
  */
 @RestController
-@RequestMapping("worker/worker")
+@RequestMapping("")
 public class WorkerController {
     @Autowired
     private WorkerService workerService;
